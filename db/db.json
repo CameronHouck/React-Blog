@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "My First Blog",
+      "body": "Why is coding so hard!",
+      "author": "Cameron",
+      "id": 1
+    },
+    {
+      "title": "2nd day",
+      "body": "",
+      "author": "Cameron",
+      "id": 2
+    }
+  ]
+}
