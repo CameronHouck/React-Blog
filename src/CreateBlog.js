@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const Create = () => {
+const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [author, setAuthor] = useState("mario");
+  const [author, setAuthor] = useState("");
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -22,7 +22,7 @@ const Create = () => {
   };
 
   return (
-    <div className="create">
+    <div className="create-blog">
       <h2>Add a New Blog</h2>
       <form onSubmit={handleSubmit}>
         <label>Blog title:</label>
@@ -40,8 +40,8 @@ const Create = () => {
         ></textarea>
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="mario">Jeff</option>
-          <option value="yoshi">Mark</option>
+          <option value="">Jeff</option>
+          <option value="">Mark</option>
         </select>
         <button>Add Blog</button>
       </form>
@@ -49,4 +49,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default CreateBlog;

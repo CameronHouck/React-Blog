@@ -1,7 +1,7 @@
 import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
-const BlogDetails = () => {
+const BlogInfo = () => {
   const { id } = useParams();
   const {
     data: blog,
@@ -19,7 +19,7 @@ const BlogDetails = () => {
   };
 
   return (
-    <div className="blog-details">
+    <div className="blog-info">
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {blog && (
@@ -34,4 +34,4 @@ const BlogDetails = () => {
   );
 };
 
-export default BlogDetails;
+export default BlogInfo;
