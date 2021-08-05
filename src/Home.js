@@ -1,7 +1,7 @@
-import BlogList from "./BlogList";
-import useFetch from "./useFetch";
+import BlogList from "./components/BlogList";
+import useFetch from "./components/useFetch";
 
-const HomePage = () => {
+const Home = () => {
   const {
     error,
     isPending,
@@ -17,4 +17,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
