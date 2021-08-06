@@ -11,13 +11,14 @@ const CreateBlog = () => {
     e.preventDefault();
     const blog = { title, body, author };
 
-    fetch("http://localhost:8000/blogs", {
+    fetch("http://localhost:3000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
     }).then(() => {
       // history.go(-1);
       history.push("/");
+      console.log(JSON.stringify(blog));
     });
   };
 
