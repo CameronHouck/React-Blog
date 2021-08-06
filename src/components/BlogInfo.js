@@ -7,11 +7,11 @@ const BlogInfo = () => {
     data: blog,
     error,
     isPending,
-  } = useFetch("http://localhost:3000/blogs/" + id);
+  } = useFetch(window.location.protocol + "//" + window.location.host + "/blogs/" + id);
   const history = useHistory();
 
   const handleClick = () => {
-    fetch("http://localhost:3000/blogs/" + blog.id, {
+    fetch(window.location.protocol + "//" + window.location.host + "/blogs/" + blog.id, {
       method: "DELETE",
     }).then(() => {
       history.push("/");

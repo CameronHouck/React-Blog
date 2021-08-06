@@ -11,7 +11,7 @@ const CreateBlog = () => {
     e.preventDefault();
     const blog = { title, body, author };
 
-    fetch("http://localhost:3000/blogs", {
+    fetch(window.location.protocol + "//" + window.location.host + "/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
